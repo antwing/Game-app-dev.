@@ -29,9 +29,9 @@ public class EnemyControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		NotAtEdge = Physics2D.OverLapCircle(EdgeCheck.postion, WallCheckRadius, WhatIsWall);
+		NotAtEdge = Physics2D.OverlapCircle(EdgeCheck.position, WallCheckRadius, WhatIsWall);
 
-		HittingWall = Physics2D.OverLapCircle(WallCheck.postion, WallCheckRadius, WhatIsWall);
+		HittingWall = Physics2D.OverlapCircle(WallCheck.position, WallCheckRadius, WhatIsWall);
 		
 		if (HittingWall || !NotAtEdge)
 		{
@@ -40,13 +40,13 @@ public class EnemyControl : MonoBehaviour {
 
 		if (MoveRight)
 		{
-			Transform.localScale = new vector3(-0.2f,0.2f,1f)
-			GetComponent<RigidBody2D>().velocity = new vector2(MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			transform.localScale = new Vector3(-0.2f,0.25f,1f);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 		else
 		{
-			Transform.localScale = new vector3(-0.2f,0.2f,1f)
-			GetComponent<RigidBody2D>().velocity = new vector2(-MoveSpeed, GetComponent<RigidBody2D>().velocity.y);
+			transform.localScale = new Vector3(0.2f,0.25f,1f);
+			GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
 		}
 	}
