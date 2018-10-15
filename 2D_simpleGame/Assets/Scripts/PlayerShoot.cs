@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour {
-	public transform FirePoint;
+
+	public Transform FirePoint;
 
 	public GameObject Projectile;
 
+	public GameObject FirePoint;
+
 	// Use this for initialization
 	void Start () {
-		Projectile = gameObject.Find("Projectile");
+		Projectile = GameObject.Find("Projectile");
 		
 	}
 	
@@ -17,7 +20,7 @@ public class PlayerShoot : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.RightControl))
 		{
-			Instantiate(Projectile.FirePoint.position, FirePoint.rotation);
+			Instantiate(Projectile.FirePoint.position, Projectile.FirePoint.rotation);
 		}
 		
 	}

@@ -34,7 +34,7 @@ public class Pojectile : MonoBehaviour {
 		if(other.tag == "Enemy"){
 			Instantiate(EnemyDeath,other.transform.position, other.transform.rotation);
 			Destroy (other.gameObject);
-			ScoreManager.Addpoints(PointsForKill);
+			ScoreManager.AddPoints(PointsForKill);
 		}
 		
 		Instantiate(ProjectileParticle, transform.position, transform.rotation);
