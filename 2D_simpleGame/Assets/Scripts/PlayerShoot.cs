@@ -8,7 +8,7 @@ public class PlayerShoot : MonoBehaviour {
 
 	public GameObject Projectile;
 
-	public GameObject FirePoint;
+
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class PlayerShoot : MonoBehaviour {
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.RightControl))
 		{
-			Instantiate(Projectile.FirePoint.position, Projectile.FirePoint.rotation);
+			Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
 		}
 		
 	}
