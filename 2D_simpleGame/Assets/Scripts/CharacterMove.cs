@@ -36,7 +36,8 @@ public class CharacterMove : MonoBehaviour {
 	{
 		//makes character jump
 		
-			if(Input.GetKeyDown(KeyCode.Space)&& grounded || Input.GetKey(KeyCode.W)&& grounded)
+		//Input.GetKeyDown(KeyCode.Space)&& grounded || 
+			if(Input.GetKey(KeyCode.W)&& grounded)
 			{
 				Jump();
 			}
@@ -47,7 +48,8 @@ public class CharacterMove : MonoBehaviour {
 				doubleJump = false;
 			}
 
-			if(Input.GetKeyDown(KeyCode.Space)&& !grounded && !doubleJump || Input.GetKey(KeyCode.W)&& !grounded && !doubleJump)
+//Input.GetKeyDown(KeyCode.Space)&& !grounded && !doubleJump || 
+			if(Input.GetKey(KeyCode.W)&& !grounded && !doubleJump)
 			{
 				Jump();
 				doubleJump = true;

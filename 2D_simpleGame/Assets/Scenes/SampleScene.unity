@@ -1460,7 +1460,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 635524285}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.621212, y: -11.797462, z: -0.18604034}
+  m_LocalPosition: {x: -3.621212, y: -11.797462, z: 0}
   m_LocalScale: {x: 0.2, y: 0.25, z: 1}
   m_Children:
   - {fileID: 936907196}
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8568bdd5e0c4671859748f9988f9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 0}
+  LevelManager: {fileID: 17172139}
 --- !u!114 &635524289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2842,10 +2842,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31304f59046034483a55d44a4b042f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   PC: {fileID: 17172134}
-  EnemyDeath: {fileID: 590813465}
-  ProjectileParticle: {fileID: 987810570}
+  EnemyDeath: {fileID: 1109720929}
+  ProjectileParticle: {fileID: 1109720929}
   PointsForKill: 10
 --- !u!50 &987810572
 Rigidbody2D:
@@ -2921,7 +2921,7 @@ Transform:
   m_GameObject: {fileID: 987810570}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.018, y: -1.407, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 17172137}
   m_RootOrder: 4
@@ -3084,7 +3084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8568bdd5e0c4671859748f9988f9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 0}
+  LevelManager: {fileID: 17172139}
 --- !u!114 &1036910011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3202,7 +3202,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1036910008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.868788, y: -5.5574617, z: -0.18604034}
+  m_LocalPosition: {x: 21.868788, y: -5.5574617, z: 0}
   m_LocalScale: {x: 0.2, y: 0.25, z: 1}
   m_Children:
   - {fileID: 1101776185}
@@ -3559,8 +3559,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1151741988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11000001, y: -0.0037999998, z: 1.1076416}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 17172137}
   m_RootOrder: 3
@@ -3951,7 +3951,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1277847196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.016788, y: -15.8304615, z: -0.18604034}
+  m_LocalPosition: {x: 23.016788, y: -15.8304615, z: 0}
   m_LocalScale: {x: 0.2, y: 0.25, z: 1}
   m_Children:
   - {fileID: 1964051146}
@@ -3989,7 +3989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8568bdd5e0c4671859748f9988f9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 0}
+  LevelManager: {fileID: 17172139}
 --- !u!61 &1277847204
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4855,7 +4855,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1649913745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.608788, y: 13.357462, z: 0.9505761}
+  m_LocalPosition: {x: -19.608788, y: 13.357462, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 635524286}
@@ -5096,7 +5096,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713859221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.79, y: 8.87, z: -0.18604034}
+  m_LocalPosition: {x: 26.79, y: 8.87, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.25, z: 1}
   m_Children:
   - {fileID: 1506886552}
@@ -5140,7 +5140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8568bdd5e0c4671859748f9988f9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 0}
+  LevelManager: {fileID: 17172139}
 --- !u!114 &1713859225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5898,7 +5898,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1908823483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.71, y: 8.79, z: -0.18604034}
+  m_LocalPosition: {x: 14.71, y: 8.79, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.25, z: 1}
   m_Children:
   - {fileID: 584611725}
@@ -5942,7 +5942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8568bdd5e0c4671859748f9988f9dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 0}
+  LevelManager: {fileID: 17172139}
 --- !u!114 &1908823487
 MonoBehaviour:
   m_ObjectHideFlags: 0
