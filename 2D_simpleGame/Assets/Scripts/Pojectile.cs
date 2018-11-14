@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pojectile : MonoBehaviour {
 
 	public float speed;
+	public float TimeOut;
 
 	public Rigidbody2D PC;
 
@@ -16,6 +17,12 @@ public class Pojectile : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//missing code
+		PC = GameObject.Find("PC");
+
+		EnemyDeath = Resources.Load("Prefabs/Death_PS") as GameObject;
+
+		ProjectileParticle = Resources.Load("Prefabs/Respawn_PS") as GameObject;
 
 		if (PC.transform.localScale.x < 0)
 		{
@@ -37,6 +44,11 @@ public class Pojectile : MonoBehaviour {
 			ScoreManager.AddPoints(PointsForKill);
 		}
 		
+		//Instantiate(ProjectileParticle, transform.position, transform.rotation);
+		Destroy (gameObject);
+	}
+	void OnCollisionEnter2D(Collision2D other)
+	{
 		Instantiate(ProjectileParticle, transform.position, transform.rotation);
 		Destroy (gameObject);
 	}

@@ -8,14 +8,14 @@ public class LevelManager : MonoBehaviour {
 
 	private Rigidbody2D PC;
 
-	//particles
+	public GameObject PC2;
 
+	//particles
 	public GameObject DeathParticle;
 
 	public GameObject RespawnParticle;
 
 	//respawn delay
-
 	public float RespawnDelay;
 
 	//point penalty on death
@@ -28,7 +28,8 @@ public class LevelManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PC = FindObjectOfType<Rigidbody2D> ();
+		PC = GameObject.Find("PC").GetComponent<Rigidbody2D>();
+		PC2 = GameObject.Find("PC");
 	}
 
 	public void RespawnPlayer(){
@@ -38,6 +39,7 @@ public class LevelManager : MonoBehaviour {
 	public IEnumerator RespawnPlayerCo(){
 		//generate death particle
 		Instantiate (DeathParticle, PC.transform.position, PC.transform.rotation);
+		PC2.SetActive (false);
 		//hide pc
 		//PC.enbled = false;
 		PC.GetComponent<Renderer>().enabled = false;
@@ -57,6 +59,7 @@ public class LevelManager : MonoBehaviour {
 		PC.transform.position = CurrentCheckPoint.transform.position;
 		//show Pc
 		//PC.enabled = true;
+		PC2.SetActive(true);
 		PC.GetComponent<Renderer>().enabled = true;
 		//spawn PC
 		Instantiate (RespawnParticle, CurrentCheckPoint.transform.position, CurrentCheckPoint.transform.rotation);
