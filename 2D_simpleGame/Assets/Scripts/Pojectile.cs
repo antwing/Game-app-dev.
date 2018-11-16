@@ -7,7 +7,7 @@ public class Pojectile : MonoBehaviour {
 	public float speed;
 	public float TimeOut;
 
-	public Rigidbody2D PC;
+	public GameObject PC;
 
 	public GameObject EnemyDeath;
 
@@ -28,6 +28,9 @@ public class Pojectile : MonoBehaviour {
 		{
 			speed = -speed;
 		}
+
+		//destroys projectile after x seconds
+		Destroy(gameObject, TimeOut);
 		
 	}
 	
