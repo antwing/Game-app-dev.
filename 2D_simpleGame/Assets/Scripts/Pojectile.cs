@@ -22,7 +22,7 @@ public class Pojectile : MonoBehaviour {
 
 		EnemyDeath = Resources.Load("Prefabs/Death_PS") as GameObject;
 
-		ProjectileParticle = Resources.Load("Prefabs/Respawn_PS") as GameObject;
+		ProjectileParticle = Resources.Load("Prefabs/particleDeath") as GameObject;
 
 		if (PC.transform.localScale.x < 0)
 		{
