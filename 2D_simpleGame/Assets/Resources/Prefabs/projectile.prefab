@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31304f59046034483a55d44a4b042f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   TimeOut: 1
   PC: {fileID: 1981436596328016, guid: 68d568b48c69c407e9d1141123edac6f, type: 2}
   EnemyDeath: {fileID: 1795168340895398, guid: 1d65b058112ad450f8108accc0b5701c, type: 2}

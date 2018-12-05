@@ -79,11 +79,11 @@ public class CharacterMove : MonoBehaviour {
 			//player flip
 			if(GetComponent<Rigidbody2D>().velocity.x > 0)
 			{
-				transform.localScale = new Vector3(5f, 5f, 0.1f);
+				transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 			}
 			else if (GetComponent<Rigidbody2D>().velocity.x < 0)
 			{
-				transform.localScale = new Vector3(-5f, 5f, 0.1f);
+				transform.localScale = new Vector3(-0.1f, 0.1f, 0.1f);
 			}
 
 	}
