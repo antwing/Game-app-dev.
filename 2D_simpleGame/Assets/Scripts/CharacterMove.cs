@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterMove : MonoBehaviour {
 
 	//player Movement variables
+	public Animator animator;
 
 	public int moveSpeed = 5;
 	public float JumpHeight;
@@ -22,7 +23,8 @@ public class CharacterMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		
+		animator.SetBool ("isJumping",false);
+		animator.SetBool ("isRunning",false);
 	}
 
 	void FixedUpdate()
@@ -35,7 +37,7 @@ public class CharacterMove : MonoBehaviour {
 	void Update () 
 	{
 		//makes character jump
-		
+
 		//Input.GetKeyDown(KeyCode.Space)&& grounded || 
 			if(Input.GetKey(KeyCode.W)&& grounded)
 			{
@@ -46,6 +48,7 @@ public class CharacterMove : MonoBehaviour {
 			if(grounded)
 			{
 				doubleJump = false;
+				animator.SetBool ("isJumping", false);
 			}
 
 //Input.GetKeyDown(KeyCode.Space)&& !grounded && !doubleJump || 
@@ -65,6 +68,10 @@ public class CharacterMove : MonoBehaviour {
 			{
 				//GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
 				moveVelocity = moveSpeed;
+				animator.SetBool ("isRunning", true);
+			}
+			else if(Input.GetKeyUp (KeyCode.D)){
+				animator.SetBool ("isRunning", false);
 			}
 
 			//left
@@ -72,7 +79,11 @@ public class CharacterMove : MonoBehaviour {
 			{
 				//GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
 				moveVelocity = -moveSpeed;
+				animator.SetBool ("isRunning", true);
 
+			}
+			else if(Input.GetKeyUp (KeyCode.A)){
+				animator.SetBool ("isRunning", false);
 			}
 			GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
@@ -87,10 +98,16 @@ public class CharacterMove : MonoBehaviour {
 			}
 
 	}
-
+	/*
+	public void OnGround()
+	{
+		animator.SetBool("isJumping", false);
+	}
+*/
 
 	public void Jump()
 	{
 		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,JumpHeight);
+		animator.SetBool ("isJumping", true);
 	}
 }

@@ -7,6 +7,7 @@ public class PlayerShoot : MonoBehaviour {
 	public Transform FirePoint;
 
 	public GameObject Projectile;
+	public Animator animator;
 
 
 
@@ -21,7 +22,13 @@ public class PlayerShoot : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.RightControl))
 		{
 			Instantiate(Projectile, FirePoint.position, FirePoint.rotation);
+			animator.SetBool("isShoot", true);
 		}
+		
+		else if(Input.GetKeyUp (KeyCode.Space)){
+				animator.SetBool ("isShoot", false);
+			}
+			
 		
 	}
 }
